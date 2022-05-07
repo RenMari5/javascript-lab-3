@@ -9,22 +9,22 @@ const submissions = [
 
 function addSubmission(array, newName, newScore, newDate) {
   const newScoreSubmission = {
-    // why does the color change like that sometimes?
+    // why does the color change like that sometimes? indicates something I haven't used yet
     name: newName,
     score: newScore,
     date: newDate,
     passed: newScore > 60 ? true : false,
   };
-  array.push(newScoreSubmission); // How are array and submissions related?
+  array.push(newScoreSubmission); // How are array and submissions related? Array lets me use any array, allows the function to be used later on in the code
 }
 
 function deleteSubmissionByIndex(array, index) {
-  array.splice(index, 1); // I'm not sure how indexes work still
+  array.splice(index, 1);
 }
 
 // Not sure about this one...
 function deleteSubmissionByName(array, name) {
-  const index = array.findIndex((submissions) => submissions.name === name);
+  const index = array.findIndex((submission) => submission.name === name); // going through and checking each of the items in the array
   array.splice(index, 1);
 }
 
@@ -34,18 +34,35 @@ function editSubmission(array, index, score) {
 }
 
 function findSubmissionByName(array, name) {
-  return name === array.find(name);
+  //   return name === array.find(name);
+  let foundStudent = array.find((student) => student.name === name);
+  return foundStudent;
 }
+
+// console.log(findSubmissionByName(submissions, "Jill"));
 
 // ???
 function findLowestScore(array) {
-  return array.forEach((score) => {
-    Math.min(score);
-  });
+  //   return array.forEach((score) => {
+  //     Math.min(score);
+  //   });
+  let studentLow = array[0];
+  for (let student of array) {
+    if (student.score < studentLow.score) {
+      studentLow = student;
+    }
+  }
+  return studentLow;
 }
 
+// console.log(findLowestScore(submissions));
+
 // use for...of loop
-function findAverageScore(array) {}
+function findAverageScore(array) {
+  let total = 0;
+  for (let score of array) {
+  }
+}
 
 // filter method to find passing scores
 function filterPassing(array) {}
