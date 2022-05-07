@@ -27,3 +27,8 @@ function deleteSubmissionByName(array, name) {
   const index = array.findIndex((submissions) => submissions.name === name);
   array.splice(index, 1);
 }
+
+function editSubmission(array, index, score) {
+  array[index].score = score;
+  array[index].passed = score > 60 ? true : false;
+}
