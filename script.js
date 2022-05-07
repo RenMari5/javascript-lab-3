@@ -37,9 +37,18 @@ function findSubmissionByName(array, name) {
   return name === array.find(name);
 }
 
+// ???
 function findLowestScore(array) {
   return array.forEach((score) => {
-    // ???
     Math.min(score);
   });
 }
+
+// use for...of loop
+function findAverageScore(array) {}
+
+// filter method to find passing scores
+function filterPassing(array) {}
+
+// filter method to find scores of 90 and above
+function filter90AndAbove(array) {}
