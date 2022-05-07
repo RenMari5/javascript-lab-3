@@ -5,4 +5,13 @@ const submissions = [
   { name: "Jill", score: 88, date: "2020-04-22", passed: true },
 ];
 
-function addSubmission(array, newName, newScore, newDate) {}
+function addSubmission(array, newName, newScore, newDate) {
+  const newScoreSubmission = {
+    // why does the color change like that sometimes?
+    name: newName,
+    score: newScore,
+    date: newDate,
+    passed: newScore > 60 ? true : false,
+  };
+  array.push(newScoreSubmission); // How are array and submissions related?
+}
