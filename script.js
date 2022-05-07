@@ -36,3 +36,10 @@ function editSubmission(array, index, score) {
 function findSubmissionByName(array, name) {
   return name === array.find(name);
 }
+
+function findLowestScore(array) {
+  return array.forEach((score) => {
+    // ???
+    Math.min(score);
+  });
+}
