@@ -32,3 +32,7 @@ function editSubmission(array, index, score) {
   array[index].score = score;
   array[index].passed = score > 60 ? true : false;
 }
+
+function findSubmissionByName(array, name) {
+  return name === array.find(name);
+}
