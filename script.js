@@ -67,13 +67,15 @@ function findAverageScore(array) {
   return total / array.length;
 }
 
-console.log(findAverageScore(submissions));
+// console.log(findAverageScore(submissions));
 
 // filter method to find passing scores
 const filterPassing = (array) => {
-  const updatedSubmissions = submissions.filter((passed) => toDo.id !== id);
-  toDoList - updatedToDoList;
+  const passingSubmissions = array.filter((passed) => array.passed !== passed);
+  return passingSubmissions;
 };
+
+// console.log(filterPassing(submissions));
 
 // filter method to find scores of 90 and above
 function filter90AndAbove(array) {}
