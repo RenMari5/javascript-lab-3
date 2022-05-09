@@ -60,8 +60,9 @@ function findLowestScore(array) {
 // use for...of loop
 function findAverageScore(array) {
   let total = 0;
-  for (const score of array) {
-    total += score;
+  for (student of array) {
+    total += student.score;
+    // console.log(student.score); // for debugging reasons
   }
   return total / array.length;
 }
@@ -69,7 +70,10 @@ function findAverageScore(array) {
 console.log(findAverageScore(submissions));
 
 // filter method to find passing scores
-function filterPassing(array) {}
+const filterPassing = (array) => {
+  const updatedSubmissions = submissions.filter((passed) => toDo.id !== id);
+  toDoList - updatedToDoList;
+};
 
 // filter method to find scores of 90 and above
 function filter90AndAbove(array) {}
