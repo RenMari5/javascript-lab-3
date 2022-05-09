@@ -84,3 +84,17 @@ function filter90AndAbove(array) {
 }
 
 // console.log(filter90AndAbove(submissions));
+
+// Extra challenges
+
+const createRange = (start, end) => {
+  let range = [];
+  for (let i = start; i <= end; i++) {
+    range.push(i);
+    // console.log(i);
+  }
+};
+
+// console.log(createRange(1, 10));
+
+const countElements = (array) => {};
