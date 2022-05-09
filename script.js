@@ -79,7 +79,7 @@ const filterPassing = (array) => {
 
 // filter method to find scores of 90 and above
 function filter90AndAbove(array) {
-  const _90AndAbove = array.filter((array.score >= 90) => );
+  const _90AndAbove = array.filter((score) => array.score >= 90);
   return _90AndAbove;
 }
 
