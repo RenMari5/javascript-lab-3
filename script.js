@@ -60,9 +60,13 @@ function findLowestScore(array) {
 // use for...of loop
 function findAverageScore(array) {
   let total = 0;
-  for (let score of array) {
+  for (const a of array) {
+    total += a;
   }
+  return total / array.length;
 }
+
+console.log(findAverageScore(submissions));
 
 // filter method to find passing scores
 function filterPassing(array) {}
