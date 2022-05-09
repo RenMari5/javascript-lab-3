@@ -60,8 +60,8 @@ function findLowestScore(array) {
 // use for...of loop
 function findAverageScore(array) {
   let total = 0;
-  for (const a of array) {
-    total += a;
+  for (const score of array) {
+    total += score;
   }
   return total / array.length;
 }
